@@ -1,0 +1,21 @@
+
+<div *ngIf="heroe">
+
+
+<div  class="flex flex-wrap w-full mt-10 gap-2 justify-center">
+<div class="w-1/4 h-full ">
+    <img class="rounded w-full" src="{{heroe.thumbnail.path}}.{{heroe.thumbnail.extension}}" alt="">
+</div>
+
+<div class="w-2/4 text-white">
+    <p class="text-3xl">{{heroe.name}}</p>
+    <p class="text-lg">{{heroe.description}}</p>
+    <p>Aparece en {{heroe.comics.available}} commics </p>
+    
+
+</div>
+
+</div>
+
+<button (click)="atras()" class="border-2 border-black rounded  py-1 px-7 bg-red-500 text-yellow-200 hover:bg-red-700"> Atras</button>
+</div>
