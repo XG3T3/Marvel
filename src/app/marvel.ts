@@ -14,7 +14,25 @@ export interface Heroes {
         path: string,
         extension: string,
     }
-    comics:{
-        available:number,
+    comics: {
+        available: number,
     }
+
+    series: Series
+
+
+}
+
+
+export interface Series {
+    available: number;
+    collectionURI: string;
+    items: SeriesItem[];
+    returned: number;
+}
+
+
+export interface SeriesItem {
+    resourceURI: string;
+    name: string;
 }

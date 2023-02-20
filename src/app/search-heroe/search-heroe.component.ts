@@ -9,33 +9,33 @@ import { HeroService } from '../hero.service';
   styleUrls: ['./search-heroe.component.scss']
 })
 export class SearchHeroeComponent implements OnInit {
-  
-  public heroesFound$: Observable<Heroes[]>=of([]);
-  public searchTerm:Subject<string>=new Subject();
+
+  public heroesFound$: Observable<Heroes[]> = of([]);
+  public searchTerm: Subject<string> = new Subject();
 
 
 
   constructor(
     private heroService: HeroService
-  ){ }
+  ) { }
 
   ngOnInit(): void {
     this.heroesFound$ = this.searchTerm.pipe(
       debounceTime(300),
       // distinctUntilChanged(),
-      
+
       //completa el observable anterior y devuelve otro observable
-        switchMap(term =>{
-         return this.heroService.getHeroSearch(term);
-        })
+      switchMap(term => {
+        return this.heroService.getHeroSearch(term);
+      })
     );
   }
 
 
-    public search(value:string){
-    
-      this.searchTerm.next(value);
-     }
+  public search(value: string) {
+
+    this.searchTerm.next(value);
   }
+}
 
 

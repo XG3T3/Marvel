@@ -1,21 +1,29 @@
-
 <div *ngIf="heroe">
 
 
-<div  class="flex flex-wrap w-full mt-10 gap-2 justify-center">
-<div class="w-1/4 h-full ">
-    <img class="rounded w-full" src="{{heroe.thumbnail.path}}.{{heroe.thumbnail.extension}}" alt="">
-</div>
+    <div class="flex flex-wrap w-full mt-10 gap-4 justify-center">
+        <div class="w-1/4 h-full max-lg:w-3/4 text-center">
+            <img class="rounded w-[40rem] h-[30rem]   max-sm:h-[20rem]"
+                src="{{heroe.thumbnail.path}}.{{heroe.thumbnail.extension}}" alt="">
+        </div>
 
-<div class="w-2/4 text-white">
-    <p class="text-3xl">{{heroe.name}}</p>
-    <p class="text-lg">{{heroe.description}}</p>
-    <p>Aparece en {{heroe.comics.available}} commics </p>
-    
+        <div class="w-2/4 text-white text-justify  max-lg:w-3/4">
+            <p class="text-4xl"> {{heroe.name}}</p>
+            <p>ID: {{heroe.id}}</p>
+            <p class="text-lg mt-2">{{heroe.description}}</p>
+            <p class="mt-10">Aparece en {{heroe.series.available}} series diferentes </p>
+            <p class="mt-10">Tiene <span class="font-bold">{{heroe.comics.available}}</span> apariciones en commics </p>
 
-</div>
 
-</div>
 
-<button (click)="atras()" class="border-2 border-black rounded  py-1 px-7 bg-red-500 text-yellow-200 hover:bg-red-700"> Atras</button>
+
+        </div>
+
+
+
+    </div>
+
+    <button (click)="atras()"
+        class="border-2 border-black rounded mt-10 py-1 px-7 bg-red-500 text-yellow-200 hover:bg-red-700">
+        Atras</button>
 </div>

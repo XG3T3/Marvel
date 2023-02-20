@@ -8,23 +8,22 @@ import { Heroes } from '../marvel';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  public heroes2:Heroes[]=[];
+  public heroes2: Heroes[] = [];
 
   constructor(
-     private heroService: HeroService
-   ){}
- 
-   ngOnInit(): void {
-   
- 
-     // this.heroService.getHeroesa().pipe(map((data:any)=>data.data.results)).subscribe(heroes =>{
-     //   this.heroes= heroes;  
-     
-     this.heroService.getHeroesaDash().subscribe((res)=>{
-       this.heroes2=res
-       console.log(res);});
-     
-     
-     
-   } 
+    private heroService: HeroService
+  ) { }
+
+  ngOnInit(): void {
+
+
+
+
+    this.heroService.getHeroesaDash().subscribe((res) => {
+      this.heroes2 = res
+    });
+
+
+
+  }
 }

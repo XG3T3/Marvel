@@ -1,21 +1,23 @@
-
 <div class="mt-4">
-  
+
     <h1 class="text-3xl text-white text-center ">Heroes Destacados</h1>
 
-<div class="  flex flex-wrap  mt-4 mx-20 justify-center max-2xl:mx-0  max-sm:mx-0 ">
-    <div class="  w-6/7 text-center  hover:scale-105  mx-2  max-md:w-[38rem] max-md:mb-2 max-sm:w-full "  *ngFor="let per of heroes2" >
-        <a routerLink="/detail/{{per.id}}">
-        <div class="inline-block grayscale hover:grayscale-0  w-[25rem] max-xl:w-fit max-sm:w-full">
-        <img class=" h-[32rem]   rounded max-2xl:w-[25rem] max-xl:w-[20rem] max-md:w-[42rem] max-sm:w-full" src="{{per.thumbnail.path}}.{{per.thumbnail.extension}}" alt="">
-        <div class="flex flex-wrap absolute w-full h-28 bottom-52 border-y-2 border-white place-items-center  "> 
-            <p class="w-full text-center text-white text-3xl">
-            {{per.name}}
-           </p>
+    <div class="  flex flex-wrap  mt-4 mx-20 justify-center max-2xl:mx-0  max-sm:mx-0 ">
+        <div class="  w-6/7 text-center  hover:scale-105  mx-2 mb-4  max-md:w-[38rem] max-md:mb-2 max-sm:w-full "
+            *ngFor="let per of heroes2">
+            <a routerLink="/detail/{{per.id}}">
+                <div class="inline-block grayscale hover:grayscale-0  w-[25rem] max-xl:w-fit max-sm:w-full">
+                    <img class=" h-[32rem]   rounded max-2xl:w-[25rem] max-xl:w-[20rem] max-md:w-[42rem] max-sm:w-full"
+                        src="{{per.thumbnail.path}}.{{per.thumbnail.extension}}" alt="">
+                    <div
+                        class="flex flex-wrap absolute w-full h-28 bottom-52 border-y-2 border-white place-items-center  ">
+                        <p class="w-full text-center text-white text-3xl">
+                            {{per.name}}
+                        </p>
+                    </div>
+                </div>
+            </a>
         </div>
-        </div>
-    </a>
     </div>
-</div>
 
 </div>
